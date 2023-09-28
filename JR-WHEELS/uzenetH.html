@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    
+    <meta charset = "utf-8">
+    <title>JR-WHEELS | Üzenet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icon/logo.png" sizes="16x16" type="image/png">
+    
+    <script src="loader/loader.js"></script>
+    <link rel="stylesheet" href="loader/loader.css">
+    
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <style>
+    
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+        
+        /* --- --- --- Alapbeállítások --- --- --- */
+        body, html {
+          margin: 0;
+          font-family: 'Patrick Hand', cursive;
+          overflow: hidden;
+          height: 100%;
+        }
+        
+        body{
+            background-image: url(Kapcsolat/Kep/backgroundC.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        /* --- --- --- Alapbeállítások eddig --- --- --- */
+        
+        /* --- --- --- Div-ek elhelyezése --- --- --- */
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4%;
+            font-size: 20px;
+        }
+        
+        #chat, textarea{
+            height: 500px;
+            width: 500px;
+            margin: 10px;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 1px 1px 2px 3px black;
+            font-size: 17px;  
+            
+        }
+        
+        #chat{
+            background-color: white;
+        }
+        /* --- --- --- Div-ek elhelyezése eddig --- --- --- */
+        
+        /* --- --- --- Footer --- --- --- */
+        .send{
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 25px;
+            padding: 10px 50px;
+            font-family: 'Patrick Hand', cursive;
+            cursor: pointer;
+            background-color: darkgoldenrod;
+        }
+        
+        .send:hover{
+            border: solid 3px black;
+            background-color: goldenrod;
+        }
+        
+        
+        h2{
+            color: white;
+            text-decoration: underline;
+        }
+        
+        #senddiv{
+            text-align: center;
+            
+            background-color: gray;
+            opacity: 0.8;
+            padding: 20px;
+        }
+        /* --- --- --- Footer eddig --- --- --- */
+    
+    </style>
+    
+    <script>
+    
+        let messages = JSON.parse(localStorage.getItem('messages')) || [];
+       
+        
+        function send() {
+            const chatDiv = document.getElementById('chat');
+            const message = document.getElementById('messageInput').value;
+            const sendDiv = document.getElementById('messageInput');
+              if (message.trim() === '') {
+                    chatDiv.style.border = 'solid 5px red';
+                    sendDiv.style.border = 'solid 5px red';
+                    return;
+              }
+
+          /* --- --- --- Hozzáadjuk az új üzenetet a tömbhöz, valamint megnyitjuk a menuH-t --- --- --- */
+          window.location.href = 'menuH.html';
+          messages.push('Egy felhasználó: ' + message);
+          updateMessagesDisplay();
+
+          /* --- --- --- Az üzenetek mentése a localStorage-ba --- --- --- */
+          localStorage.setItem('messages', JSON.stringify(messages));
+
+          document.getElementById('messageInput').value = '';
+        }
+
+        function updateMessagesDisplay() {
+          const messagesDiv = document.getElementById('chat');
+          messagesDiv.innerHTML = '';
+
+          /* --- --- --- Az üzenetek megjelenítése a div-ben --- --- --- */
+          for (const message of messages) {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            messagesDiv.appendChild(messageDiv);
+          }
+        }
+
+        /* --- --- --- Az oldal betöltésekor az üzenetek frissítése és megjelenítése --- --- --- */
+        window.onload = function () {
+          updateMessagesDisplay();
+        };
+
+    
+    </script>
+    
+</head>
+<body>
+    
+    <div class="loader"></div>
+    
+    <div class="container">
+        
+        <div id="chat">
+            
+            <!-- Előző üzenetek. -->
+            
+        </div>
+        
+        <textarea placeholder="Ide írja üzenetét!" id="messageInput"></textarea>
+        
+    </div>
+    
+    <div id="senddiv">
+        <h2>Amennyiben megírta üzenetét kattintson a küldés gombra.</h2>
+        <button onclick="send()" class="send">Küldés</button>
+    
+    </div>
+    
+</body>
+</html>

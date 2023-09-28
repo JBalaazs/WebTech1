@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* --- --- --- Alapbeállítások/Vissza a menübe gomb  --- --- --- */
+body, html{
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;    
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    background-image: url(Kep/backgroundB.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+
+.back:hover{
+    color: yellow;
+}
+/* --- --- --- Alapbeállítások/... eddig --- --- --- */
+
+/* --- --- --- Kétrészes menü itt kezdődik. --- --- --- */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    border: solid 1px black;
+    
+}
+
+.desc, .log{
+    width: 400px;
+    height: 500px;
+    
+    opacity: 0.85;
+    box-shadow: 1px 1px 4px 5px black;
+}
+
+.desc{
+    background-color: #4287f5;
+    color: white;
+}
+
+form{
+    padding-left: 15px;
+    font-size: 20px; 
+}
+
+.title{
+    text-align: center;
+    font-size: 35px;
+}
+
+.log{
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.inform{
+    font-size: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
+ol, li{
+    text-align: left;
+    font-size: 20px;
+    list-style-position: inside;
+}
+
+.goreg{
+    padding: 10px 20px;
+    font-size: 20px;
+    border: solid 1px white;
+    background-color: #3a64a6;
+    color: white;
+    border-radius: 25px 10px;
+    cursor: pointer; 
+    font-family: 'Patrick Hand', cursive;
+}
+
+.goreg:hover{
+    background-color: #3d5f94;
+    border: solid 1px black;
+}
+/* --- --- --- Kétrészes menü eddig --- --- --- */
+
+/* --- --- --- Bejelentkezés itt kezdődik. --- --- --- */
+.submit{
+    padding: 10px 20px;
+    font-size: 20px;
+    border: solid 1px black;
+    background-color: #9ad91c;
+    color: black;
+    border-radius: 25px 10px;
+    cursor: pointer;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.submit:hover{
+    background-color: #71942c;
+    border: solid 1px black;
+}
+
+input[type="text"], input[type="password"] {
+  
+  margin-bottom: 10px;
+    
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Patrick Hand', cursive;
+}
+/* --- --- --- Bejelentkezés eddig. --- --- --- */

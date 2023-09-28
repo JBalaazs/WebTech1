@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* --- --- --- Alapbeállítások --- --- --- */
+body, html{
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;    
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    background-image: url(Kep/backgroundR.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* --- --- --- Alapbeállítások eddig --- --- --- */
+
+/* --- --- --- Kétrészes menü --- --- --- */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    border: solid 1px black;
+    
+}
+
+.desc, .reg{
+    width: 400px;
+    height: 500px;
+    
+    opacity: 0.85;
+    box-shadow: 1px 1px 4px 5px black;
+}
+
+.desc{
+    background-color: #eb4034;
+    color: white;
+}
+
+form{
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.title{
+    text-align: center;
+    font-size: 35px;
+}
+
+.reg{
+    background-color: white;
+}
+
+.inform{
+    font-size: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
+ol, li{
+    text-align: left;
+    font-size: 20px;
+    list-style-position: inside;
+}
+
+.gologin{
+    padding: 10px 20px;
+    font-size: 20px;
+    border: solid 1px white;
+    background-color: #eb4034;
+    color: white;
+    border-radius: 25px 10px;
+    cursor: pointer; 
+    font-family: 'Patrick Hand', cursive;
+}
+
+.gologin:hover{
+    background-color: #c2382f;
+    border: solid 1px black;
+}
+/* --- --- --- Kétrészes menü eddig --- --- --- */
+
+/* --- --- --- Regisztráció itt kezdődik --- --- --- */
+
+.submit{
+    padding: 10px 20px;
+    font-size: 20px;
+    border: solid 1px black;
+    background-color: #f29807;
+    color: white;
+    border-radius: 25px 10px;
+    cursor: pointer;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.submit:hover{
+    background-color: #de9116;
+    border: solid 1px black;
+}
+
+input[type="text"], input[type="date"], input[type="password"], input[type="radio"], input[type="checkbox"] {
+  
+  margin-bottom: 10px;
+    
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Patrick Hand', cursive;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+/* --- --- --- Regisztráció eddig --- --- --- */
+
+/* --- --- --- Színválasztó itt kezdődik --- --- --- */
+.colorpicker{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    background-color: dimgray;
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: 10px;
+    
+    color: white;
+    font-size: 20px;
+}
+/* --- --- --- Színválasztó eddig --- --- --- */

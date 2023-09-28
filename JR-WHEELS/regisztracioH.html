@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Kapcsolat/regisztracioC.css">
+    <title>JR-WHEELS | Regisztráció</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icon/logo.png" sizes="16x16" type="image/png">
+    
+    <script src="loader/loader.js"></script>
+    <link rel="stylesheet" href = "loader/loader.css">
+    
+    <script src="Kapcsolat/Javascript/colorpicker.js"></script>
+    <script src="Kapcsolat/Javascript/reg.js"></script>
+    
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    
+    
+</head>
+<body>
+    
+    <div class="loader"></div>
+    
+    <div class="container">
+    
+        <div class="desc">
+        
+            <div class="text">
+            
+                <p class="title">Információk:</p>
+                
+                
+                <p class = "inform">Amennyiben üzenetet szeretne nekünk küldeni, kérjuk regisztráljon be. <br> <span style="text-decoration: underline">Menete:</span></p>
+                
+                <ol>
+                <li>Regisztráció</li>
+                <li>Bejelentkezés</li>
+                <li>Üzenet küldése</li>
+                </ol>
+            
+                <p class="title">Már regisztrált?</p>
+                <div style="text-align: center"><a href="bejelentkezesH.html"><button class="gologin">Bejelentkezés</button></a></div>
+                
+            </div>
+        
+        </div>
+        <div class="reg">
+        
+            <p class="title">Regisztráció:</p>
+            
+            <form id = registration>
+                
+                <label>Felhasználónév:</label>
+                <input type="text" id="nickname" name="nickname" placeholder="Adja meg felhasználónevét!" required> <br>
+                
+                <label>Jelszó:</label>
+                <input type="password" id="password" name="password" placeholder="Adja meg jelszavát!" required> <br>
+                
+                <label>Nem:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label>Férfi</label>
+                
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label>Nő</label> <br>
+                
+                <label>Születési dátum:</label>
+                <input type="date" id="birthdate" name="birthdate" required> <br>
+                
+                <div style="text-align: center"><button type="submit" class="submit">Regisztráció</button></div> <br>
+                
+                <input type="checkbox" id="privacy" required>
+                <label>Elfogadom az adatvédelmi tájékoztatót.</label>
+                
+            </form>
+        
+        </div>
+    
+            <div class="colorpicker">
+        
+        <table>
+        
+            <tr>
+                
+                <th>Válassz!</th>
+                <th><span style="text-decoration: underline">Színek:</span></th>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input type="radio" id="PF" name="color" value="PF" checked></td>
+                <td><span style="color: #f25449">P</span><span style="color: white">F</span></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input type="radio" id="KF" name="color" value="KF"></td>
+                <td><span style="color: deepskyblue">K</span><span style="color: white">F</span></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input type="radio" id="PK" name="color" value="PK"></td>
+                <td><span style="color: #f25449">P</span><span style="color: deepskyblue">K</span></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input type="radio" id="KP" name="color" value="KP"></td>
+                <td><span style="color: deepskyblue">K</span><span style="color: #f25449">P</span></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input type="radio" id="ZS" name="color" value="ZS"></td>
+                <td><span style="color: greenyellow">Z</span><span style="color: yellow">S</span></td>
+                
+            </tr>
+        
+        </table>
+        
+    </div>
+        
+    </div>
+    
+    
+    <script src="Kapcsolat/Javascript/script.js"></script>
+    
+</body>
+</html>

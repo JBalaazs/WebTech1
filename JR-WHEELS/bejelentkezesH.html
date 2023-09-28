@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Kapcsolat/bejelentkezesC.css">
+    <title>JR-WHEELS | Bejelentkezés</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon/logo.png" sizes="16x16" type="image/png">
+    
+    <script src="loader/loader.js"></script>
+    <link rel="stylesheet" href = "loader/loader.css">
+    
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</head>
+<body>
+    
+    <div class="loader"></div>
+    
+    <a href="menuH.html" class="back"><ion-icon name="chevron-back-outline"></ion-icon></a>
+    
+    <div class="container">
+    
+        <div class="desc">
+            
+            <div class="text">
+            
+                <p class="title">Információk:</p>
+                
+                
+                <p class = "inform">Jelentkezz be és vedd fel velünk a kapcsolatot! <br> <span style="text-decoration: underline">Amit tudnod kell:</span></p>
+                
+                <ul>
+                <li>24 órán belül felvesszük veled a kapcsolatot</li>
+                <li>Napi 100+ ügyfél keres meg minket</li>
+                <li>Készségesen segítünk termékeinkkel kapcsolatban</li>
+                </ul>
+            
+                <p class="title">Még nem regisztrált?</p>
+                <div style="text-align: center"><a href="regisztracioH.html"><button class="goreg">Regisztráció</button></a></div>
+                
+            </div>
+        
+        </div>
+        <div class="log">
+        
+            <h2>Bejelentkezés:</h2> <!-- Azért nem <p></p>, hogy be tudjam mutatni az elem kiválasztást HTML tag név alapján. -->
+            
+            <form id="login">
+                
+                <label>Felhasználónév:</label>
+                <input type="text" id="nickname" name="nickname" required> <br>
+                
+                <label>Jelszó:</label>
+                <input type="password" id="password" name="password" required> <br>
+                
+                <div style="text-align: center"><button type="submit" class="submit">Bejelentkezés</button></div> <br>
+                
+                
+                <p id="error"></p> <!--Új HTML elem készítéséhez van itt.-->
+                
+            </form>
+        
+        </div>
+    
+    </div>
+    
+    <script src="Kapcsolat/Javascript/HTML_tag.js"></script>
+    <script src="Kapcsolat/Javascript/login.js"></script> <!--Felépül a HTML tartalom, így már minden létezik, amit ki akar választani.-->
+    
+</body>
+</html>

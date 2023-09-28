@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /*Nincs csúszka*/
+  font-family: 'Patrick Hand', cursive;
+}
+
+body{
+    background-image: url("Kep/background.jpg");
+	background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+/*Alakzatok elhelyezkedéséhez szükséges lépések*/
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50%;
+}
+
+.div1, .div2 {
+    
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: black;
+    opacity: 0.86;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.container1 a, .container2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.container1 ion-icon, .container2 ion-icon{ /*Az icon design*/
+    align-self: center;
+    font-size: 50px;
+}
+
+.div3{
+    width: 420px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: black;
+    opacity: 0.86;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50%;
+}
+
+/*Elhelyezkedés eddig*/
+
+/*Alakzatok design*/
+
+.container1 div:hover, .container2 div:hover{
+    color: white;
+    box-shadow: 3px 3px 3px 3px yellow;
+}
+
+.container1 a:hover, .container2 a:hover{
+    text-decoration: underline;
+}
+
+.container2 div:hover{
+    box-shadow: 3px 3px 3px 3px red;
+}
+
+/*Design eddig*/
+
+/*Animáció*/
+
+/*keyframes a becsúszó animációhoz*/
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.86;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.86;
+  }
+}
+
+/* A becsúszó animáció a divekre */
+.container1 .div1, .container1 .div2 {
+  animation: slideDown 3s forwards;
+}
+.container2 .div3 {
+  animation: slideUp 3s forwards;
+}
+
+.container1 div:hover, .container2 div:hover {
+  font-size: 28px; 
+  box-shadow: 0 2px 4px yellow;
+}
+
+.container2 div:hover {
+  box-shadow: 0 2px 4px red;
+}
+
+/*Animáció eddig*/
